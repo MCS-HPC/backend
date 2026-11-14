@@ -64,7 +64,7 @@ def get_balance(db: Database, username: str) -> dict:
     user = _get_user_by_username(db, username)
     balance = _require_credit_balance(user)
 
-    return {"balance": balance}
+    return { "balance": balance }
 
 
 def charge_credits(db: Database, username: str, amount: float, job_id: str) -> dict:
